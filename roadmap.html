@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>TakaLink Roadmap – From Loose Plastic to Verified Value</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #FDFCFB;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+        .font-display {
+            font-family: 'Montserrat', 'Inter', sans-serif;
+            font-weight: 900;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .phase-bg-number {
+                font-size: 80px !important;
+                bottom: -10px !important;
+                right: -5px !important;
+            }
+            .p-10 {
+                padding: 1.5rem !important;
+            }
+            .md\:p-20 {
+                padding: 2rem !important;
+            }
+            .text-5xl {
+                font-size: 2rem !important;
+            }
+            .md\:text-8xl {
+                font-size: 3.5rem !important;
+            }
+            .gap-16 {
+                gap: 2rem !important;
+            }
+            .grid {
+                gap: 1rem !important;
+            }
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; }
+            .shadow-sm, .shadow-xl, .shadow-2xl { box-shadow: none !important; }
+        }
+        .bg-offwhite { background-color: #FDFCFB; }
+        .bg-phase0 { background-color: #F1F5F9; }
+        .bg-phase1 { background-color: #ECFDF5; }
+        .bg-phase2 { background-color: #FFFBEB; }
+        .bg-phase3 { background-color: #F0FDFA; }
+        .bg-phase4 { background-color: #FAF5FF; }
+        .text-revenue { color: #059669; }
+        .text-impact { color: #2563EB; }
+        .rounded-3xl { border-radius: 1.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-\[40px\] { border-radius: 40px; }
+        .rounded-\[60px\] { border-radius: 60px; }
+        .transition-all { transition: all 0.2s ease; }
+        .hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .hover\:-translate-y-1:hover { transform: translateY(-4px); }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Fixed download button -->
+<div class="no-print" style="position: fixed; bottom: 20px; right: 20px; z-index: 100;">
+    <button onclick="window.print();" style="width: 56px; height: 56px; background-color: #059669; color: white; border: none; border-radius: 16px; cursor: pointer; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+    </button>
+</div>
+
+<!-- Header -->
+<header style="padding: 6rem 1.5rem 4rem; background: white; border-bottom: 1px solid #f1f5f9; position: relative;">
+    <div style="max-width: 1280px; margin: 0 auto; position: relative; z-index: 10;">
+        <div style="display: flex; flex-direction: column; gap: 3rem; margin-bottom: 4rem;">
+            <div style="max-width: 48rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;">
+                    <div style="width: 48px; height: 48px; background: #059669; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+                    </div>
+                    <span style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.4em; text-transform: uppercase; color: #059669;">TakaLink Strategic Roadmap</span>
+                </div>
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; line-height: 0.95; margin-bottom: 2rem;">From Loose Plastic to <br><span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: normal; color: #059669;">Verified Value</span></h1>
+                <p style="font-size: 1.5rem; color: #64748b; font-style: italic; border-left: 4px solid #d1fae5; padding-left: 1.5rem;">"We don't own trucks or balers. We verify, score, match, and finance."</p>
+            </div>
+            <!-- SDG badges -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="width: 48px; height: 48px; background: #E5243B; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; transition: transform 0.2s;" title="SDG 5: Gender Equality"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></div>
+                <div style="width: 48px; height: 48px; background: #A21942; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;" title="SDG 8: Decent Work"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div>
+                <div style="width: 48px; height: 48px; background: #BF8B2E; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;" title="SDG 12: Responsible Consumption"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg></div>
+                <div style="width: 48px; height: 48px; background: #3F7E44; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;" title="SDG 13: Climate Action"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+            </div>
+        </div>
+        <!-- Metric cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 40px; border: 1px solid #f1f5f9;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;"><div style="width: 40px; height: 40px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3 style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: #94a3b8;">TODAY</h3></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Pickers</span><span style="font-size: 0.875rem; font-weight: 900; color: #2563EB;">0 pickers</span></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Revenue</span><span style="font-size: 0.875rem; font-weight: 900; color: #059669;">$0 revenue</span></div>
+                <div style="display: flex; justify-content: space-between;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Verified</span><span style="font-size: 0.875rem; font-weight: 900;">0 tons</span></div>
+            </div>
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 40px; border: 1px solid #f1f5f9;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;"><div style="width: 40px; height: 40px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></div><h3 style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: #94a3b8;">YEAR 2</h3></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Pickers</span><span style="font-size: 0.875rem; font-weight: 900; color: #2563EB;">1,500 pickers</span></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Revenue</span><span style="font-size: 0.875rem; font-weight: 900; color: #059669;">$100k annual</span></div>
+                <div style="display: flex; justify-content: space-between;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Verified</span><span style="font-size: 0.875rem; font-weight: 900;">2,000 tons</span></div>
+            </div>
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 40px; border: 1px solid #f1f5f9;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;"><div style="width: 40px; height: 40px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></div><h3 style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.1em; color: #94a3b8;">YEAR 5</h3></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Pickers</span><span style="font-size: 0.875rem; font-weight: 900; color: #2563EB;">50,000+ pickers</span></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Revenue</span><span style="font-size: 0.875rem; font-weight: 900; color: #059669;">$5M+ annual</span></div>
+                <div style="display: flex; justify-content: space-between;"><span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8;">Verified</span><span style="font-size: 0.875rem; font-weight: 900;">500,000 tons</span></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Core Products -->
+<section style="padding: 8rem 1.5rem; background: white;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 4rem;"><h2 style="font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 1rem;">Core Products & Revenue Models</h2><p style="color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem;">Monetizing the Data Layer</p></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+            <div style="padding: 2rem; background: #f8fafc; border-radius: 40px; border: 1px solid #f1f5f9;"><div style="width: 56px; height: 56px; background: #eff6ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></div><h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem;">TakaData</h3><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 2rem;">Verified transaction ledger</p><div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;"><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8;">Revenue</p><p style="font-size: 0.7rem; font-weight: 700;">Subscription / per-report fee</p><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-top: 0.75rem;">First Customer</p><p style="font-size: 0.7rem; font-weight: 700; color: #059669;">PETPRO (EPR compliance)</p></div></div>
+            <div style="padding: 2rem; background: #f8fafc; border-radius: 40px; border: 1px solid #f1f5f9;"><div style="width: 56px; height: 56px; background: #ecfdf5; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div><h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem;">TakaHub</h3><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 2rem;">Digital ID + training</p><div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;"><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8;">Revenue</p><p style="font-size: 0.7rem; font-weight: 700;">Training fee / donor grant</p><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-top: 0.75rem;">First Customer</p><p style="font-size: 0.7rem; font-weight: 700; color: #059669;">TERECSO (grant pilot)</p></div></div>
+            <div style="padding: 2rem; background: #f8fafc; border-radius: 40px; border: 1px solid #f1f5f9;"><div style="width: 56px; height: 56px; background: #fff7ed; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div><h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem;">TakaScore</h3><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 2rem;">Credit history for informal workers</p><div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;"><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8;">Revenue</p><p style="font-size: 0.7rem; font-weight: 700;">Per-inquiry fee</p><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-top: 0.75rem;">First Customer</p><p style="font-size: 0.7rem; font-weight: 700; color: #059669;">CRDB Bank (pilot)</p></div></div>
+            <div style="padding: 2rem; background: #f8fafc; border-radius: 40px; border: 1px solid #f1f5f9;"><div style="width: 56px; height: 56px; background: #f0fdfa; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div><h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem;">TakaMarket</h3><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 2rem;">Matches verified supply with buyers</p><div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;"><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8;">Revenue</p><p style="font-size: 0.7rem; font-weight: 700;">2-5% transaction fee</p><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-top: 0.75rem;">First Customer</p><p style="font-size: 0.7rem; font-weight: 700; color: #059669;">Recyclers (Arena, EcoAct)</p></div></div>
+            <div style="padding: 2rem; background: #f8fafc; border-radius: 40px; border: 1px solid #f1f5f9;"><div style="width: 56px; height: 56px; background: #faf5ff; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem;">TakaCarbon</h3><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 2rem;">Plastic credits from verified collection</p><div style="border-top: 1px solid #e2e8f0; padding-top: 1rem;"><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8;">Revenue</p><p style="font-size: 0.7rem; font-weight: 700;">Sale on PCX / Verra</p><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; color: #94a3b8; margin-top: 0.75rem;">First Customer</p><p style="font-size: 0.7rem; font-weight: 700; color: #059669;">International corporate buyer</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Market Size & Regulatory Drivers -->
+<section style="padding: 8rem 1.5rem; background: #ecfdf5;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 4rem;"><h2 style="font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 1rem;">The Market We Unlock</h2><p style="color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem;">Tanzania & East Africa</p></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            <div style="background: white; padding: 2.5rem; border-radius: 60px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">📊</div>
+                <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1.5rem;">Plastic Waste Volume</h3>
+                <ul style="list-style: none;">
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">Tanzania:</span><span>500,000 tonnes/year</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">Current collection:</span><span>≤35%</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">Uncaptured opportunity:</span><span>325,000+ tonnes</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0;"><span style="font-weight: 700;">EAC growth:</span><span>5–7% annually</span></li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 2.5rem; border-radius: 60px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚖️</div>
+                <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1.5rem;">Regulatory Drivers</h3>
+                <ul style="list-style: none;">
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">Kenya / SA:</span><span>EPR mandatory (2021/2022)</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">Tanzania:</span><span>EPR transition – law imminent</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9;"><span style="font-weight: 700;">EAC Bill:</span><span>Harmonised plastic rules</span></li>
+                    <li style="display: flex; justify-content: space-between; padding: 0.5rem 0;"><span style="font-weight: 700;">AfCFTA:</span><span>Regional processing hubs</span></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: #64748b; font-style: italic; font-size: 0.875rem;">“Data is the new currency – verified transaction records are the infrastructure for EPR compliance and cross-border trade.”</div>
+    </div>
+</section>
+
+<!-- Virtuous Cycle -->
+<section style="background: #064e3b; padding: 5rem 1.5rem; color: white;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem;">
+            <div style="text-align: center;"><div style="width: 80px; height: 80px; background: #065f46; border-radius: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div><span style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em;">Data</span></div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div style="text-align: center;"><div style="width: 80px; height: 80px; background: #065f46; border-radius: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div><span style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em;">Credit</span></div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div style="text-align: center;"><div style="width: 80px; height: 80px; background: #065f46; border-radius: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg></div><span style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em;">Efficiency</span></div>
+        </div>
+        <div style="text-align: center; max-width: 28rem;"><h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; font-style: italic; margin-bottom: 1rem;">The Virtuous Cycle</h3><p style="color: #a7f3d0; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;">Verified Data unlocks Credit, which enables Physical Efficiency, generating even more Data.</p></div>
+    </div>
+</section>
+
+<!-- Phase 0 -->
+<div style="max-width: 1280px; margin: 6rem auto; padding: 0 1.5rem;">
+    <div style="background: #F1F5F9; border-radius: 60px; padding: 2rem; position: relative; overflow: hidden;">
+        <div style="display: flex; flex-direction: column; gap: 2rem; position: relative; z-index: 2;">
+            <div><div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;"><div style="width: 80px; height: 80px; background: #64748b; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: white;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div><div><span style="font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; color: #475569;">PHASE 0</span><h4 style="font-size: 0.8rem; font-weight: 700; color: #94a3b8;">Now – 3 months</h4></div></div><h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">Pre-Launch</h2><p style="font-size: 1.25rem; font-weight: 700; font-style: italic; margin-bottom: 2rem; color: #475569;">Build the ledger, sign the moat</p><div><div style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; padding: 0.75rem 1.5rem; border-radius: 16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span style="font-size: 0.7rem; font-weight: 900;">Supply-side moat secured</span></div></div></div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.8); padding: 1.5rem; border-radius: 40px;"><div style="display: flex; justify-content: space-between; margin-bottom: 1rem;"><p style="font-weight: 900;">Sign TERECSO MOU</p><span>🤝</span></div><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem;">Exclusive data access</p><div style="background: #f8fafc; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg><span style="font-size: 0.7rem; font-weight: 900; color: #059669;">$0</span></div></div>
+                <div style="background: rgba(255,255,255,0.8); padding: 1.5rem; border-radius: 40px;"><div style="display: flex; justify-content: space-between; margin-bottom: 1rem;"><p style="font-weight: 900;">Onboard 10 Centers</p><span>📱</span></div><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem;">First 50 pickers with digital ID</p><div style="background: #f8fafc; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg><span style="font-size: 0.7rem; font-weight: 900; color: #059669;">$0</span></div></div>
+                <div style="background: rgba(255,255,255,0.8); padding: 1.5rem; border-radius: 40px;"><div style="display: flex; justify-content: space-between; margin-bottom: 1rem;"><p style="font-weight: 900;">Manual Verified Sale</p><span>💰</span></div><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem;">1 ton picker → recycler (proof of concept)</p><div style="background: #f8fafc; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg><span style="font-size: 0.7rem; font-weight: 900; color: #059669;">$0</span></div></div>
+                <div style="background: rgba(255,255,255,0.8); padding: 1.5rem; border-radius: 40px;"><div style="display: flex; justify-content: space-between; margin-bottom: 1rem;"><p style="font-weight: 900;">Free PETPRO Report</p><span>📄</span></div><p style="font-size: 0.75rem; color: #64748b; margin-bottom: 1rem;">1 compliance report</p><div style="background: #f8fafc; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg><span style="font-size: 0.7rem; font-weight: 900; color: #059669;">$0</span></div></div>
+            </div>
+            <div style="background: #fdf2f8; border-radius: 40px; padding: 1.5rem; display: flex; gap: 1rem; align-items: center;"><div style="background: white; padding: 1rem; border-radius: 16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></div><div><span style="font-size: 0.65rem; font-weight: 900; letter-spacing: 0.1em; color: #f472b6;">WOMEN'S EMPOWERMENT FOCUS</span><p style="font-size: 0.8rem; font-weight: 700; color: #831843;">Establishing digital IDs for female pickers to ensure direct, transparent payments.</p></div></div>
+        </div>
+        <div style="position: absolute; bottom: -20px; right: -10px; font-family: 'Montserrat', sans-serif; font-size: 150px; font-weight: 900; color: rgba(0,0,0,0.03); pointer-events: none;">0</div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer style="padding: 8rem 1.5rem; background: #FDFCFB; border-top: 1px solid #f1f5f9;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="display: flex; flex-direction: column; gap: 4rem; margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;"><div style="width: 56px; height: 56px; background: #059669; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg></div><div><span style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900;">TakaLink</span><p style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: #94a3b8;">Data-Driven Waste Economy</p></div></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4rem;"><div><h5 style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: #94a3b8; margin-bottom: 1rem;">Strategic Focus</h5><ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;"><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">Data Utility Ledger</li><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">Asset Credit Scoring</li><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">Marketplace Matching</li></ul></div><div><h5 style="font-size: 0.65rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: #94a3b8; margin-bottom: 1rem;">Social Impact</h5><ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;"><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">Women's Empowerment</li><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">CO₂ Reduction</li><li style="font-size: 0.8rem; font-weight: 700; color: #475569;">Fair Wage Tracking</li></ul></div></div>
+            <div><p style="font-size: 0.7rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: #94a3b8;">Backbone of East Africa</p><p style="font-size: 1rem; font-weight: 700;">Tanzania • Kenya • Uganda • Rwanda</p></div>
+        </div>
+        <div style="border-top: 1px solid #e2e8f0; padding-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;"><p style="font-size: 0.65rem; font-weight: 700; color: #94a3b8;">© 2026 TakaLink. All rights reserved.</p><p style="font-size: 0.65rem; color: #94a3b8; font-style: italic;">Data as of April 2026. Projections based on pilot assumptions. For illustrative purposes only.</p></div>
+    </div>
+</footer>
+
+</body>
+</html>
