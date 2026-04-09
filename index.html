@@ -1,0 +1,1792 @@
+<html lang="en"><head>
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google AI Studio App</title>
+  <script src="/_aistudio-iframe.js"></script><script src="https://cdn.jsdelivr.net/npm/html2canvas-pro"></script><style>.aistudio-hover-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px rgba(128,128,128,0.6) !important; }.aistudio-active-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px #87a9ff !important; }#aistudio-focus-mode-tag { position: absolute; display: none; background: #87a9ff; border-radius: 4px; border: 0.5px solid white; z-index: 10000; text-transform: lowercase; padding: 2px 4px; color: #32302c; font-family: Inter, sans-serif; font-size: 12px; font-style: normal; font-weight: 400; line-height: 16px; pointer-events: none; }#aistudio-hover-mode-tag { position: absolute; display: none; background: rgba(128,128,128,0.6); border-radius: 4px; border: 0.5px solid white; z-index: 10000; text-transform: lowercase; padding: 2px 4px; color: white; font-family: Inter, sans-serif; font-size: 12px; font-style: normal; font-weight: 400; line-height: 16px; pointer-events: none; }</style><style type="text/css" data-vite-dev-id="/app/applet/src/index.css">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Playfair Display", serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-red-50: oklch(97.1% 0.013 17.38);
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-red-800: oklch(44.4% 0.177 26.899);
+    --color-red-900: oklch(39.6% 0.141 25.723);
+    --color-orange-50: oklch(98% 0.016 73.684);
+    --color-orange-100: oklch(95.4% 0.038 75.164);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-orange-700: oklch(55.3% 0.195 38.402);
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-400: oklch(76.5% 0.177 163.223);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-emerald-600: oklch(59.6% 0.145 163.225);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-teal-50: oklch(98.4% 0.014 180.72);
+    --color-teal-600: oklch(60% 0.118 184.704);
+    --color-teal-700: oklch(51.1% 0.096 186.391);
+    --color-blue-50: oklch(97% 0.014 254.604);
+    --color-blue-100: oklch(93.2% 0.032 255.585);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-purple-50: oklch(97.7% 0.014 308.299);
+    --color-purple-100: oklch(94.6% 0.033 307.174);
+    --color-purple-600: oklch(55.8% 0.288 302.321);
+    --color-purple-700: oklch(49.6% 0.265 301.924);
+    --color-pink-50: oklch(97.1% 0.014 343.198);
+    --color-pink-100: oklch(94.8% 0.028 342.258);
+    --color-pink-200: oklch(89.9% 0.061 343.231);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
+    --color-pink-500: oklch(65.6% 0.241 354.308);
+    --color-pink-600: oklch(59.2% 0.249 0.584);
+    --color-pink-900: oklch(40.8% 0.153 2.432);
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    --leading-tight: 1.25;
+    --leading-relaxed: 1.625;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --blur-md: 12px;
+    --blur-3xl: 64px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --font-display: "Montserrat", sans-serif;
+    --color-offwhite: #FDFCFB;
+    --color-phase0: #F1F5F9;
+    --color-phase1: #ECFDF5;
+    --color-phase2: #FFFBEB;
+    --color-phase3: #F0FDFA;
+    --color-phase4: #FAF5FF;
+    --color-revenue: #059669;
+    --color-impact: #2563EB;
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .-right-20 {
+    right: calc(var(--spacing) * -20);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-8 {
+    right: calc(var(--spacing) * 8);
+  }
+  .right-full {
+    right: 100%;
+  }
+  .-bottom-20 {
+    bottom: calc(var(--spacing) * -20);
+  }
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
+  }
+  .bottom-full {
+    bottom: 100%;
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-1\/2 {
+    left: calc(1 / 2 * 100%);
+  }
+  .-z-0 {
+    z-index: calc(0 * -1);
+  }
+  .-z-10 {
+    z-index: calc(10 * -1);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .-mt-16 {
+    margin-top: calc(var(--spacing) * -16);
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
+  .-mr-16 {
+    margin-right: calc(var(--spacing) * -16);
+  }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
+  .mb-24 {
+    margin-bottom: calc(var(--spacing) * 24);
+  }
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-3\.5 {
+    height: calc(var(--spacing) * 3.5);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-1\.5 {
+    width: calc(var(--spacing) * 1.5);
+  }
+  .w-1\/3 {
+    width: calc(1 / 3 * 100%);
+  }
+  .w-3\.5 {
+    width: calc(var(--spacing) * 3.5);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .min-w-\[800px\] {
+    min-width: 800px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .cursor-default {
+    cursor: default;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-16 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 16) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 16) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .divide-y {
+    :where(& > :not(:last-child)) {
+      --tw-divide-y-reverse: 0;
+      border-bottom-style: var(--tw-border-style);
+      border-top-style: var(--tw-border-style);
+      border-top-width: calc(1px * var(--tw-divide-y-reverse));
+      border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    }
+  }
+  .divide-slate-100 {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-slate-100);
+    }
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-\[40px\] {
+    border-radius: 40px;
+  }
+  .rounded-\[60px\] {
+    border-radius: 60px;
+  }
+  .rounded-\[80px\] {
+    border-radius: 80px;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
+  .border-l-4 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
+  .border-blue-100 {
+    border-color: var(--color-blue-100);
+  }
+  .border-emerald-100 {
+    border-color: var(--color-emerald-100);
+  }
+  .border-emerald-700 {
+    border-color: var(--color-emerald-700);
+  }
+  .border-orange-100 {
+    border-color: var(--color-orange-100);
+  }
+  .border-pink-100 {
+    border-color: var(--color-pink-100);
+  }
+  .border-purple-100 {
+    border-color: var(--color-purple-100);
+  }
+  .border-red-100 {
+    border-color: var(--color-red-100);
+  }
+  .border-slate-100 {
+    border-color: var(--color-slate-100);
+  }
+  .border-slate-200 {
+    border-color: var(--color-slate-200);
+  }
+  .border-slate-900 {
+    border-color: var(--color-slate-900);
+  }
+  .border-white {
+    border-color: var(--color-white);
+  }
+  .border-white\/50 {
+    border-color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
+  }
+  .bg-\[\#3F7E44\] {
+    background-color: #3F7E44;
+  }
+  .bg-\[\#A21942\] {
+    background-color: #A21942;
+  }
+  .bg-\[\#BF8B2E\] {
+    background-color: #BF8B2E;
+  }
+  .bg-\[\#E5243B\] {
+    background-color: #E5243B;
+  }
+  .bg-blue-50 {
+    background-color: var(--color-blue-50);
+  }
+  .bg-blue-50\/50 {
+    background-color: color-mix(in srgb, oklch(97% 0.014 254.604) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-50) 50%, transparent);
+    }
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
+  }
+  .bg-emerald-50\/50 {
+    background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-50) 50%, transparent);
+    }
+  }
+  .bg-emerald-500 {
+    background-color: var(--color-emerald-500);
+  }
+  .bg-emerald-500\/10 {
+    background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
+    }
+  }
+  .bg-emerald-600 {
+    background-color: var(--color-emerald-600);
+  }
+  .bg-emerald-800 {
+    background-color: var(--color-emerald-800);
+  }
+  .bg-emerald-900 {
+    background-color: var(--color-emerald-900);
+  }
+  .bg-offwhite {
+    background-color: var(--color-offwhite);
+  }
+  .bg-orange-50 {
+    background-color: var(--color-orange-50);
+  }
+  .bg-orange-50\/50 {
+    background-color: color-mix(in srgb, oklch(98% 0.016 73.684) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-orange-50) 50%, transparent);
+    }
+  }
+  .bg-orange-500 {
+    background-color: var(--color-orange-500);
+  }
+  .bg-orange-600 {
+    background-color: var(--color-orange-600);
+  }
+  .bg-phase0 {
+    background-color: var(--color-phase0);
+  }
+  .bg-phase1 {
+    background-color: var(--color-phase1);
+  }
+  .bg-phase2 {
+    background-color: var(--color-phase2);
+  }
+  .bg-phase3 {
+    background-color: var(--color-phase3);
+  }
+  .bg-phase4 {
+    background-color: var(--color-phase4);
+  }
+  .bg-pink-50\/50 {
+    background-color: color-mix(in srgb, oklch(97.1% 0.014 343.198) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-pink-50) 50%, transparent);
+    }
+  }
+  .bg-pink-200\/20 {
+    background-color: color-mix(in srgb, oklch(89.9% 0.061 343.231) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-pink-200) 20%, transparent);
+    }
+  }
+  .bg-purple-50 {
+    background-color: var(--color-purple-50);
+  }
+  .bg-purple-50\/50 {
+    background-color: color-mix(in srgb, oklch(97.7% 0.014 308.299) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-purple-50) 50%, transparent);
+    }
+  }
+  .bg-purple-600 {
+    background-color: var(--color-purple-600);
+  }
+  .bg-red-50\/50 {
+    background-color: color-mix(in srgb, oklch(97.1% 0.013 17.38) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-red-50) 50%, transparent);
+    }
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
+  }
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
+  }
+  .bg-slate-50\/50 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.003 247.858) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-50) 50%, transparent);
+    }
+  }
+  .bg-slate-500 {
+    background-color: var(--color-slate-500);
+  }
+  .bg-slate-900 {
+    background-color: var(--color-slate-900);
+  }
+  .bg-teal-50 {
+    background-color: var(--color-teal-50);
+  }
+  .bg-teal-600 {
+    background-color: var(--color-teal-600);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/50 {
+    background-color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
+  }
+  .bg-white\/80 {
+    background-color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  .fill-current {
+    fill: currentcolor;
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .p-16 {
+    padding: calc(var(--spacing) * 16);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
+  .py-32 {
+    padding-block: calc(var(--spacing) * 32);
+  }
+  .py-40 {
+    padding-block: calc(var(--spacing) * 40);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+  .pt-24 {
+    padding-top: calc(var(--spacing) * 24);
+  }
+  .pr-12 {
+    padding-right: calc(var(--spacing) * 12);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
+  }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[300px\] {
+    font-size: 300px;
+  }
+  .leading-\[0\.95\] {
+    --tw-leading: 0.95;
+    line-height: 0.95;
+  }
+  .leading-\[1\.1\] {
+    --tw-leading: 1.1;
+    line-height: 1.1;
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .tracking-\[0\.3em\] {
+    --tw-tracking: 0.3em;
+    letter-spacing: 0.3em;
+  }
+  .tracking-\[0\.4em\] {
+    --tw-tracking: 0.4em;
+    letter-spacing: 0.4em;
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .tracking-widest {
+    --tw-tracking: var(--tracking-widest);
+    letter-spacing: var(--tracking-widest);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-blue-600 {
+    color: var(--color-blue-600);
+  }
+  .text-emerald-300 {
+    color: var(--color-emerald-300);
+  }
+  .text-emerald-400 {
+    color: var(--color-emerald-400);
+  }
+  .text-emerald-500 {
+    color: var(--color-emerald-500);
+  }
+  .text-emerald-600 {
+    color: var(--color-emerald-600);
+  }
+  .text-emerald-700 {
+    color: var(--color-emerald-700);
+  }
+  .text-impact {
+    color: var(--color-impact);
+  }
+  .text-orange-600 {
+    color: var(--color-orange-600);
+  }
+  .text-orange-700 {
+    color: var(--color-orange-700);
+  }
+  .text-pink-400 {
+    color: var(--color-pink-400);
+  }
+  .text-pink-500 {
+    color: var(--color-pink-500);
+  }
+  .text-pink-900 {
+    color: var(--color-pink-900);
+  }
+  .text-purple-600 {
+    color: var(--color-purple-600);
+  }
+  .text-purple-700 {
+    color: var(--color-purple-700);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
+  }
+  .text-red-800\/70 {
+    color: color-mix(in srgb, oklch(44.4% 0.177 26.899) 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-red-800) 70%, transparent);
+    }
+  }
+  .text-red-900 {
+    color: var(--color-red-900);
+  }
+  .text-revenue {
+    color: var(--color-revenue);
+  }
+  .text-slate-200 {
+    color: var(--color-slate-200);
+  }
+  .text-slate-400 {
+    color: var(--color-slate-400);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-600 {
+    color: var(--color-slate-600);
+  }
+  .text-slate-700 {
+    color: var(--color-slate-700);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
+  }
+  .text-slate-900\/5 {
+    color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-slate-900) 5%, transparent);
+    }
+  }
+  .text-teal-600 {
+    color: var(--color-teal-600);
+  }
+  .text-teal-700 {
+    color: var(--color-teal-700);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-50 {
+    opacity: 50%;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-emerald-200 {
+    --tw-shadow-color: oklch(90.5% 0.093 164.15);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-emerald-200) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-emerald-900\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(37.8% 0.077 168.94) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-900) 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .blur-3xl {
+    --tw-blur: blur(var(--blur-3xl));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(var(--blur-md));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-700 {
+    --tw-duration: 700ms;
+    transition-duration: 700ms;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .group-hover\:scale-110 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:bg-emerald-500\/20 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-emerald-500) 20%, transparent);
+        }
+      }
+    }
+  }
+  .group-hover\:text-impact {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-impact);
+      }
+    }
+  }
+  .group-hover\:text-revenue {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-revenue);
+      }
+    }
+  }
+  .group-hover\:opacity-100 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 100%;
+      }
+    }
+  }
+  .group-hover\/empower\:scale-110 {
+    &:is(:where(.group\/empower):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .selection\:bg-emerald-100 {
+    & *::selection {
+      background-color: var(--color-emerald-100);
+    }
+    &::selection {
+      background-color: var(--color-emerald-100);
+    }
+  }
+  .hover\:-translate-y-1 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .hover\:-translate-y-2 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .hover\:scale-105 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-110 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:rotate-3 {
+    &:hover {
+      @media (hover: hover) {
+        rotate: 3deg;
+      }
+    }
+  }
+  .hover\:bg-emerald-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-500);
+      }
+    }
+  }
+  .hover\:bg-slate-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-50);
+      }
+    }
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-600);
+      }
+    }
+  }
+  .hover\:text-emerald-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-emerald-600);
+      }
+    }
+  }
+  .hover\:text-pink-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-pink-600);
+      }
+    }
+  }
+  .hover\:shadow-2xl {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .active\:scale-95 {
+    &:active {
+      --tw-scale-x: 95%;
+      --tw-scale-y: 95%;
+      --tw-scale-z: 95%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .sm\:col-span-2 {
+    @media (width >= 40rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:p-20 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
+    }
+  }
+  .md\:text-8xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+  }
+  .lg\:w-1\/3 {
+    @media (width >= 64rem) {
+      width: calc(1 / 3 * 100%);
+    }
+  }
+  .lg\:w-2\/3 {
+    @media (width >= 64rem) {
+      width: calc(2 / 3 * 100%);
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-5 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:items-end {
+    @media (width >= 64rem) {
+      align-items: flex-end;
+    }
+  }
+  .lg\:text-right {
+    @media (width >= 64rem) {
+      text-align: right;
+    }
+  }
+}
+@layer base {
+  body {
+    background-color: var(--color-offwhite);
+    color: var(--color-slate-900);
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  header {
+    padding-top: 2rem !important;
+  }
+}
+.glass {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+  background-color: color-mix(in srgb, #fff 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
+  }
+  --tw-backdrop-blur: blur(var(--blur-md));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.text-balance {
+  text-wrap: balance;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+    }
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="min-h-screen font-sans bg-offwhite text-slate-900 selection:bg-emerald-100"><div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50 no-print"><button class="w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative" title="Download PDF"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer w-6 h-6" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"></path><rect x="6" y="14" width="12" height="8" rx="1"></rect></svg><span class="absolute right-full mr-4 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Print / Save PDF</span></button><button class="w-14 h-14 bg-white text-slate-900 border border-slate-200 rounded-2xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative" title="Download HTML"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-code w-6 h-6" aria-hidden="true"><path d="M10 12.5 8 15l2 2.5"></path><path d="m14 12.5 2 2.5-2 2.5"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"></path></svg><span class="absolute right-full mr-4 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Download HTML</span></button></div><header class="px-6 pt-24 pb-16 bg-white relative overflow-hidden border-b border-slate-100"><div class="max-w-7xl mx-auto relative z-10"><div style="opacity: 1; transform: none;"><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-16"><div class="max-w-3xl"><div class="flex items-center gap-3 mb-8"><div class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-emerald-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-recycle w-7 h-7" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path><path d="m14 16-3 3 3 3"></path><path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path><path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg></div><span class="text-sm font-black tracking-[0.4em] uppercase text-emerald-600">TakaLink Strategic Roadmap</span></div><h1 class="font-display text-5xl md:text-8xl font-black leading-[0.95] mb-8 tracking-tighter">From Loose Plastic to <br><span class="italic font-serif font-normal text-emerald-600">Verified Value</span></h1><p class="text-2xl text-slate-500 font-medium italic border-l-4 border-emerald-100 pl-6 mb-8">"We don’t own trucks or balers. We verify, score, match, and finance."</p><p class="text-lg text-slate-400 font-bold uppercase tracking-widest max-w-2xl">We track waste from picker → aggregator → buyer, and use that data to unlock financing for the entire ecosystem.</p></div><div class="flex flex-wrap gap-4"><div class="group relative"><div class="w-12 h-12 bg-[#E5243B] rounded-xl flex items-center justify-center text-white shadow-lg transition-all hover:-translate-y-2 hover:rotate-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-xl">SDG 5: Gender Equality</div></div><div class="group relative"><div class="w-12 h-12 bg-[#A21942] rounded-xl flex items-center justify-center text-white shadow-lg transition-all hover:-translate-y-2 hover:rotate-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase w-5 h-5" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-xl">SDG 8: Decent Work</div></div><div class="group relative"><div class="w-12 h-12 bg-[#BF8B2E] rounded-xl flex items-center justify-center text-white shadow-lg transition-all hover:-translate-y-2 hover:rotate-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-recycle w-5 h-5" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path><path d="m14 16-3 3 3 3"></path><path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path><path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg></div><div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-xl">SDG 12: Responsible Consumption</div></div><div class="group relative"><div class="w-12 h-12 bg-[#3F7E44] rounded-xl flex items-center justify-center text-white shadow-lg transition-all hover:-translate-y-2 hover:rotate-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf w-5 h-5" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div><div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-slate-900 text-white text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-xl">SDG 13: Climate Action</div></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-slate-50 p-8 rounded-[40px] border border-slate-100 hover:shadow-2xl transition-all group" style="opacity: 1; transform: none;"><div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div><h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Today</h3></div><div class="space-y-3"><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Pickers</span><span class="text-sm font-black text-impact">0 pickers</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Revenue</span><span class="text-sm font-black text-revenue">$0 revenue</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Verified</span><span class="text-sm font-black text-slate-900">0 tons verified</span></div></div></div><div class="bg-slate-50 p-8 rounded-[40px] border border-slate-100 hover:shadow-2xl transition-all group" style="opacity: 1; transform: none;"><div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-5 h-5" aria-hidden="true"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg></div><h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Year 2</h3></div><div class="space-y-3"><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Pickers</span><span class="text-sm font-black text-impact">1,500 pickers</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Revenue</span><span class="text-sm font-black text-revenue">$100k annual</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Verified</span><span class="text-sm font-black text-slate-900">2,000 tons</span></div></div></div><div class="bg-slate-50 p-8 rounded-[40px] border border-slate-100 hover:shadow-2xl transition-all group" style="opacity: 1; transform: none;"><div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div><h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Year 5</h3></div><div class="space-y-3"><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Pickers</span><span class="text-sm font-black text-impact">50,000+ pickers</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Revenue</span><span class="text-sm font-black text-revenue">$5M+ annual</span></div><div class="flex items-center justify-between"><span class="text-xs font-bold text-slate-400">Verified</span><span class="text-sm font-black text-slate-900">500,000 tons</span></div></div></div></div></div></div><div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -z-10"></div></header><section class="py-32 px-6 bg-white"><div class="max-w-7xl mx-auto"><div class="mb-20 text-center md:text-left"><h2 class="font-display text-5xl font-black mb-4 tracking-tight">Core Products &amp; Revenue Models</h2><p class="text-slate-500 font-bold uppercase tracking-[0.3em] text-sm">Monetizing the Data Layer</p></div><div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-32"><div class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all group flex flex-col" style="opacity: 1; transform: none;"><div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-6 h-6" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div><h3 class="text-xl font-black mb-3">TakaData</h3><p class="text-xs text-slate-500 mb-8 leading-relaxed flex-1">Verified transaction ledger (weight, type, GPS)</p><div class="space-y-4 pt-6 border-t border-slate-200"><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Revenue</span><p class="text-[11px] font-bold text-slate-900 leading-tight">Subscription / per-report fee</p></div><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">First Customer</span><p class="text-[11px] font-bold text-emerald-600">PETPRO (EPR compliance)</p></div></div></div><div class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all group flex flex-col" style="opacity: 1; transform: none;"><div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-6 h-6" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div><h3 class="text-xl font-black mb-3">TakaHub</h3><p class="text-xs text-slate-500 mb-8 leading-relaxed flex-1">Digital ID + training for pickers &amp; aggregators</p><div class="space-y-4 pt-6 border-t border-slate-200"><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Revenue</span><p class="text-[11px] font-bold text-slate-900 leading-tight">Training fee / donor grant</p></div><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">First Customer</span><p class="text-[11px] font-bold text-emerald-600">TERECSO members</p></div></div></div><div class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all group flex flex-col" style="opacity: 1; transform: none;"><div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-6 h-6" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></div><h3 class="text-xl font-black mb-3">TakaScore</h3><p class="text-xs text-slate-500 mb-8 leading-relaxed flex-1">Credit history for informal workers</p><div class="space-y-4 pt-6 border-t border-slate-200"><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Revenue</span><p class="text-[11px] font-bold text-slate-900 leading-tight">Per-inquiry fee (banks, financiers)</p></div><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">First Customer</span><p class="text-[11px] font-bold text-emerald-600">CRDB Bank (pilot)</p></div></div></div><div class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all group flex flex-col" style="opacity: 1; transform: none;"><div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-6 h-6" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></div><h3 class="text-xl font-black mb-3">TakaMarket</h3><p class="text-xs text-slate-500 mb-8 leading-relaxed flex-1">Matches verified supply with buyers</p><div class="space-y-4 pt-6 border-t border-slate-200"><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Revenue</span><p class="text-[11px] font-bold text-slate-900 leading-tight">2-5% transaction fee</p></div><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">First Customer</span><p class="text-[11px] font-bold text-emerald-600">Recyclers (Arena, EcoAct)</p></div></div></div><div class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all group flex flex-col" style="opacity: 1; transform: none;"><div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf w-6 h-6" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div><h3 class="text-xl font-black mb-3">TakaCarbon</h3><p class="text-xs text-slate-500 mb-8 leading-relaxed flex-1">Plastic credits from verified collection</p><div class="space-y-4 pt-6 border-t border-slate-200"><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Revenue</span><p class="text-[11px] font-bold text-slate-900 leading-tight">Sale on PCX / Verra; revenue share</p></div><div><span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">First Customer</span><p class="text-[11px] font-bold text-emerald-600">International corporate buyer</p></div></div></div></div><div class="grid md:grid-cols-4 gap-8"><div class="p-8 bg-blue-50/50 rounded-[40px] border border-blue-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-8 h-8 text-blue-600 mb-6" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><h4 class="text-lg font-black mb-2">Pickers</h4><p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-4">Benefit</p><p class="text-sm text-slate-700 font-medium leading-relaxed">Verified digital ID leads to fair wages, direct payments, and inclusion in the formal economy.</p></div><div class="p-8 bg-emerald-50/50 rounded-[40px] border border-emerald-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 w-8 h-8 text-emerald-600 mb-6" aria-hidden="true"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg><h4 class="text-lg font-black mb-2">Aggregators</h4><p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-4">Benefit &amp; Pay</p><p class="text-sm text-slate-700 font-medium leading-relaxed">Unlock asset financing (balers/trucks) via TakaScore. Pay small transaction/training fees.</p></div><div class="p-8 bg-purple-50/50 rounded-[40px] border border-purple-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-8 h-8 text-purple-600 mb-6" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg><h4 class="text-lg font-black mb-2">Buyers</h4><p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-4">Pay</p><p class="text-sm text-slate-700 font-medium leading-relaxed">Recyclers pay for verified supply chains and EPR compliance data to meet global standards.</p></div><div class="p-8 bg-orange-50/50 rounded-[40px] border border-orange-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark w-8 h-8 text-orange-600 mb-6" aria-hidden="true"><path d="M10 18v-7"></path><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path></svg><h4 class="text-lg font-black mb-2">Financiers</h4><p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-4">Pay</p><p class="text-sm text-slate-700 font-medium leading-relaxed">Banks pay per-inquiry fees for TakaScore to de-risk loans to the informal waste sector.</p></div></div></div></section><section class="py-32 px-6 bg-slate-50"><div class="max-w-7xl mx-auto"><div class="grid lg:grid-cols-2 gap-20 items-center"><div><h2 class="font-display text-5xl font-black mb-8 tracking-tight">The TakaScore Engine</h2><p class="text-xl text-slate-500 mb-12 leading-relaxed">We turn informal transaction history into a bankable credit score. Our proprietary algorithm de-risks the "unbankable" waste sector.</p><div class="bg-white p-10 rounded-[40px] shadow-xl border border-slate-100"><div class="flex items-center gap-4 mb-8"><div class="w-12 h-12 rounded-2xl bg-orange-600 flex items-center justify-center text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div><span class="text-xs font-black uppercase tracking-widest text-slate-400">The TakaScore Formula</span></div><div class="space-y-6"><div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl"><span class="text-sm font-bold">Volume Consistency</span><span class="text-xs font-black text-orange-600">35%</span></div><div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl"><span class="text-sm font-bold">Material Quality (Purity)</span><span class="text-xs font-black text-orange-600">25%</span></div><div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl"><span class="text-sm font-bold">Transaction Frequency</span><span class="text-xs font-black text-orange-600">20%</span></div><div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl"><span class="text-sm font-bold">Repayment Behavior</span><span class="text-xs font-black text-orange-600">20%</span></div></div></div></div><div class="space-y-8"><div class="p-8 bg-white rounded-[40px] shadow-sm border border-slate-100"><h4 class="text-lg font-black mb-4 flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-6 h-6 text-emerald-600" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Why TakaLink Wins</h4><ul class="space-y-4"><li class="flex gap-3 text-sm text-slate-600 font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-emerald-500 shrink-0 mt-0.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg><span><strong>Asset-Light:</strong> No heavy capex on trucks or balers. We scale via data.</span></li><li class="flex gap-3 text-sm text-slate-600 font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-emerald-500 shrink-0 mt-0.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg><span><strong>Network Moat:</strong> Exclusive MOU with TERECSO locks the supply side data.</span></li><li class="flex gap-3 text-sm text-slate-600 font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-emerald-500 shrink-0 mt-0.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg><span><strong>First Mover:</strong> Only platform in EA providing verified EPR compliance reports.</span></li></ul></div><div class="p-8 bg-red-50/50 rounded-[40px] border border-red-100"><h4 class="text-lg font-black mb-4 flex items-center gap-3 text-red-900"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-down w-6 h-6 text-red-600" aria-hidden="true"><path d="M16 17h6v-6"></path><path d="m22 17-8.5-8.5-5 5L2 7"></path></svg>Execution Risks</h4><ul class="space-y-4"><li class="flex gap-3 text-sm text-red-800/70 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0 mt-2"></div><span><strong>Data Integrity:</strong> Risk of fraudulent entries at collection points. (Mitigated by GPS + photo verification).</span></li><li class="flex gap-3 text-sm text-red-800/70 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0 mt-2"></div><span><strong>Adoption:</strong> Resistance from informal aggregators to digital transparency.</span></li><li class="flex gap-3 text-sm text-red-800/70 font-medium"><div class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0 mt-2"></div><span><strong>Regulatory:</strong> Changes in EPR laws or plastic ban enforcement.</span></li></ul></div></div></div></div></section><section class="bg-emerald-900 py-20 px-6 text-white overflow-hidden"><div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"><div class="flex items-center gap-8"><div class="flex flex-col items-center gap-4"><div class="w-20 h-20 rounded-3xl bg-emerald-800 flex items-center justify-center border border-emerald-700 shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-10 h-10 text-emerald-400" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div><span class="text-[10px] font-black uppercase tracking-widest text-emerald-500">Data</span></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-8 h-8 text-emerald-700" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><div class="flex flex-col items-center gap-4"><div class="w-20 h-20 rounded-3xl bg-emerald-800 flex items-center justify-center border border-emerald-700 shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-10 h-10 text-emerald-400" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></div><span class="text-[10px] font-black uppercase tracking-widest text-emerald-500">Credit</span></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-8 h-8 text-emerald-700" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><div class="flex flex-col items-center gap-4"><div class="w-20 h-20 rounded-3xl bg-emerald-800 flex items-center justify-center border border-emerald-700 shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-10 h-10 text-emerald-400" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg></div><span class="text-[10px] font-black uppercase tracking-widest text-emerald-500">Efficiency</span></div></div><div class="text-center lg:text-right max-w-md"><h3 class="font-serif text-4xl font-bold mb-4 italic">The Virtuous Cycle</h3><p class="text-emerald-300 text-sm font-medium uppercase tracking-[0.3em] leading-relaxed">Verified Data unlocks Credit, which enables Physical Efficiency, generating even more Data.</p></div></div></section><main class="py-32"><div class="max-w-7xl mx-auto px-6 space-y-16"><div class="group relative overflow-hidden rounded-[60px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 bg-phase0" style="opacity: 1; transform: none;"><div class="p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center"><div class="lg:w-1/3 w-full"><div class="flex items-center gap-6 mb-10"><div class="w-20 h-20 rounded-3xl bg-slate-500 flex items-center justify-center text-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake w-8 h-8" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg></div><div><span class="text-xs font-black uppercase tracking-[0.4em] text-slate-600">Phase 0</span><h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">Now – 3 months</h4></div></div><h2 class="font-display text-5xl font-black mb-6 leading-[1.1] tracking-tight">Pre-Launch</h2><p class="text-xl font-bold italic mb-10 text-slate-600">Build the ledger, sign the moat</p><div class="space-y-6"><div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5 text-slate-600" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="text-xs font-black uppercase tracking-widest text-slate-900">Supply-side moat secured</span></div><div class="p-6 bg-white/50 rounded-3xl border border-white/50"><p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cumulative Milestone</p><p class="text-sm font-bold text-slate-900 leading-relaxed">Revenue: $0 | Impact: 50 pickers, 1 ton verified</p></div></div></div><div class="lg:w-2/3 w-full grid sm:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check w-4 h-4" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Sign TERECSO MOU</p><span class="text-2xl">🤝</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">Exclusive data access</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$0</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Onboard 10 Centers</p><span class="text-2xl">📱</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">First 50 pickers with digital ID</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$0</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-4 h-4" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Manual Verified Sale</p><span class="text-2xl">💰</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">1 ton picker → recycler</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$0</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check w-4 h-4" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Free PETPRO Report</p><span class="text-2xl">📄</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">1 compliance report</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$0</span></div></div></div><div class="sm:col-span-2 p-8 bg-pink-50/50 rounded-[40px] border border-pink-100 flex gap-6 items-center relative overflow-hidden group/empower"><div class="p-4 bg-white rounded-2xl text-pink-500 shadow-lg relative z-10 group-hover/empower:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></div><div class="relative z-10"><span class="uppercase tracking-[0.3em] text-[10px] font-black block mb-2 text-pink-400">Women's Empowerment Focus</span><p class="text-sm text-pink-900 font-bold leading-relaxed italic">Establishing digital IDs for female pickers to ensure direct, transparent payments.</p></div><div class="absolute top-0 right-0 w-32 h-32 bg-pink-200/20 blur-3xl rounded-full -mr-16 -mt-16"></div></div></div></div><span class="absolute -bottom-20 -right-20 font-display text-[300px] font-black text-slate-900/5 leading-none pointer-events-none select-none">0</span></div><div class="group relative overflow-hidden rounded-[60px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 bg-phase1" style="opacity: 1; transform: none;"><div class="p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center"><div class="lg:w-1/3 w-full"><div class="flex items-center gap-6 mb-10"><div class="w-20 h-20 rounded-3xl bg-emerald-500 flex items-center justify-center text-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-8 h-8" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg></div><div><span class="text-xs font-black uppercase tracking-[0.4em] text-emerald-700">Phase 1</span><h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">3 – 9 months</h4></div></div><h2 class="font-display text-5xl font-black mb-6 leading-[1.1] tracking-tight">First Paying Customers</h2><p class="text-xl font-bold italic mb-10 text-emerald-700">TakaScore Pilot &amp; Asset Kickoff</p><div class="space-y-6"><div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5 text-emerald-700" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="text-xs font-black uppercase tracking-widest text-slate-900">70% Transport ↓</span></div><div class="p-6 bg-white/50 rounded-3xl border border-white/50"><p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cumulative Milestone</p><p class="text-sm font-bold text-slate-900 leading-relaxed">Revenue: ~$12k | Impact: 150 pickers, 1 baler, 10 aggregators</p></div></div></div><div class="lg:w-2/3 w-full grid sm:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-emerald-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">PETPRO Contract</p><span class="text-2xl">💵</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">Monthly verification reports</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$1,500/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-emerald-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-4 h-4" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaHub Training</p><span class="text-2xl">🎓</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">100 pickers (TERECSO)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$500</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-emerald-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-4 h-4" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaScore Pilot</p><span class="text-2xl">📊</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">Credit history for 10 aggregators</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$20/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-emerald-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-4 h-4" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Asset Financing</p><span class="text-2xl">🚛➡️📦</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">First baler facilitated (5% fee)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$250</span></div></div></div><div class="sm:col-span-2 p-8 bg-pink-50/50 rounded-[40px] border border-pink-100 flex gap-6 items-center relative overflow-hidden group/empower"><div class="p-4 bg-white rounded-2xl text-pink-500 shadow-lg relative z-10 group-hover/empower:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></div><div class="relative z-10"><span class="uppercase tracking-[0.3em] text-[10px] font-black block mb-2 text-pink-400">Women's Empowerment Focus</span><p class="text-sm text-pink-900 font-bold leading-relaxed italic">Priority loan facilitation for women-led aggregation hubs to close the gender financing gap.</p></div><div class="absolute top-0 right-0 w-32 h-32 bg-pink-200/20 blur-3xl rounded-full -mr-16 -mt-16"></div></div></div></div><span class="absolute -bottom-20 -right-20 font-display text-[300px] font-black text-slate-900/5 leading-none pointer-events-none select-none">1</span></div><div class="group relative overflow-hidden rounded-[60px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 bg-phase2" style="opacity: 1; transform: none;"><div class="p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center"><div class="lg:w-1/3 w-full"><div class="flex items-center gap-6 mb-10"><div class="w-20 h-20 rounded-3xl bg-orange-500 flex items-center justify-center text-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck w-8 h-8" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg></div><div><span class="text-xs font-black uppercase tracking-[0.4em] text-orange-700">Phase 2</span><h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">9 – 18 months</h4></div></div><h2 class="font-display text-5xl font-black mb-6 leading-[1.1] tracking-tight">Scaling Up</h2><p class="text-xl font-bold italic mb-10 text-orange-700">Scale TakaScore &amp; Launch TakaMarket</p><div class="space-y-6"><div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5 text-orange-700" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="text-xs font-black uppercase tracking-widest text-slate-900">500 Aggregators Scored</span></div><div class="p-6 bg-white/50 rounded-3xl border border-white/50"><p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cumulative Milestone</p><p class="text-sm font-bold text-slate-900 leading-relaxed">Annual Revenue: ~$100k | Impact: 1,500 pickers, $200k monthly volume</p></div></div></div><div class="lg:w-2/3 w-full grid sm:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-orange-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark w-4 h-4" aria-hidden="true"><path d="M10 18v-7"></path><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Financier Adoption</p><span class="text-2xl">🏦</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">EFTA, PASS Trust (500 inquiries)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$2,500/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-orange-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-4 h-4" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaMarket Launch</p><span class="text-2xl">🛒</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">2% fee on $200k volume</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$4,000/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-orange-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-4 h-4" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Recycler Subs</p><span class="text-2xl">⚙️</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">5 large recyclers (Arena, EcoAct)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$1,000/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-orange-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaHub Expansion</p><span class="text-2xl">🌍</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">1,000 pickers (FUNGUO partner)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$5,000</span></div></div></div><div class="sm:col-span-2 p-8 bg-pink-50/50 rounded-[40px] border border-pink-100 flex gap-6 items-center relative overflow-hidden group/empower"><div class="p-4 bg-white rounded-2xl text-pink-500 shadow-lg relative z-10 group-hover/empower:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></div><div class="relative z-10"><span class="uppercase tracking-[0.3em] text-[10px] font-black block mb-2 text-pink-400">Women's Empowerment Focus</span><p class="text-sm text-pink-900 font-bold leading-relaxed italic">Business management training for 200+ women to lead the next 50 aggregation hubs.</p></div><div class="absolute top-0 right-0 w-32 h-32 bg-pink-200/20 blur-3xl rounded-full -mr-16 -mt-16"></div></div></div></div><span class="absolute -bottom-20 -right-20 font-display text-[300px] font-black text-slate-900/5 leading-none pointer-events-none select-none">2</span></div><div class="group relative overflow-hidden rounded-[60px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 bg-phase3" style="opacity: 1; transform: none;"><div class="p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center"><div class="lg:w-1/3 w-full"><div class="flex items-center gap-6 mb-10"><div class="w-20 h-20 rounded-3xl bg-teal-600 flex items-center justify-center text-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-8 h-8" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><span class="text-xs font-black uppercase tracking-[0.4em] text-teal-700">Phase 3</span><h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">18 – 36 months</h4></div></div><h2 class="font-display text-5xl font-black mb-6 leading-[1.1] tracking-tight">Regional Hubs</h2><p class="text-xl font-bold italic mb-10 text-teal-700">TakaCarbon &amp; Physical Hubs Enabled</p><div class="space-y-6"><div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5 text-teal-700" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="text-xs font-black uppercase tracking-widest text-slate-900">10 Physical Hubs</span></div><div class="p-6 bg-white/50 rounded-3xl border border-white/50"><p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cumulative Milestone</p><p class="text-sm font-bold text-slate-900 leading-relaxed">Annual Revenue: ~$500k | Impact: 5,000 pickers, 10 hubs, first carbon credits</p></div></div></div><div class="lg:w-2/3 w-full grid sm:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf w-4 h-4" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaCarbon Credits</p><span class="text-2xl">🌍</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">1,000 tons OBP (PCX Markets)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$45,000</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-4 h-4" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Optimal Hub Mapping</p><span class="text-2xl">🔥</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">10 investment prospectuses</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$0</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check w-4 h-4" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Hub Licensing</p><span class="text-2xl">📑</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">$100/mo per hub operator</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$1,000/mo</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-teal-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Cross-border (Kenya)</p><span class="text-2xl">🌍+</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">2% fee on $1M monthly volume</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$20,000/mo</span></div></div></div><div class="sm:col-span-2 p-8 bg-pink-50/50 rounded-[40px] border border-pink-100 flex gap-6 items-center relative overflow-hidden group/empower"><div class="p-4 bg-white rounded-2xl text-pink-500 shadow-lg relative z-10 group-hover/empower:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></div><div class="relative z-10"><span class="uppercase tracking-[0.3em] text-[10px] font-black block mb-2 text-pink-400">Women's Empowerment Focus</span><p class="text-sm text-pink-900 font-bold leading-relaxed italic">Hubs owned by women's cooperatives, ensuring long-term wealth stays in the community.</p></div><div class="absolute top-0 right-0 w-32 h-32 bg-pink-200/20 blur-3xl rounded-full -mr-16 -mt-16"></div></div></div></div><span class="absolute -bottom-20 -right-20 font-display text-[300px] font-black text-slate-900/5 leading-none pointer-events-none select-none">3</span></div><div class="group relative overflow-hidden rounded-[60px] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 bg-phase4" style="opacity: 1; transform: none;"><div class="p-10 md:p-20 flex flex-col lg:flex-row gap-16 items-center"><div class="lg:w-1/3 w-full"><div class="flex items-center gap-6 mb-10"><div class="w-20 h-20 rounded-3xl bg-purple-600 flex items-center justify-center text-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-8 h-8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div><div><span class="text-xs font-black uppercase tracking-[0.4em] text-purple-700">Phase 4</span><h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">3 – 5 years</h4></div></div><h2 class="font-display text-5xl font-black mb-6 leading-[1.1] tracking-tight">The Horizon</h2><p class="text-xl font-bold italic mb-10 text-purple-700">National Data Utility &amp; Pan-African Expansion</p><div class="space-y-6"><div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-2xl shadow-sm border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-5 h-5 text-purple-700" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="text-xs font-black uppercase tracking-widest text-slate-900">Pan-EA Network</span></div><div class="p-6 bg-white/50 rounded-3xl border border-white/50"><p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cumulative Milestone</p><p class="text-sm font-bold text-slate-900 leading-relaxed">Annual Revenue: $5M+ | Impact: 50,000+ pickers, 500k tons verified, 80% transport cost reduction</p></div></div></div><div class="lg:w-2/3 w-full grid sm:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark w-4 h-4" aria-hidden="true"><path d="M10 18v-7"></path><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">NEMC EPR Integration</p><span class="text-2xl">🏛️</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">Mandatory licensing fee</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$500k/yr</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-4 h-4" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Credit Bureau Status</p><span class="text-2xl">📊</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">1M inquiries/year ($2 fee)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$2M/yr</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf w-4 h-4" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">TakaCarbon Scale</p><span class="text-2xl">🌍</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">50,000 credits/year (15% fee)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$2.25M/yr</span></div></div></div><div class="bg-white/80 backdrop-blur-md p-8 rounded-[40px] border border-white flex gap-6 items-start group/act hover:bg-white transition-all hover:-translate-y-1"><div class="mt-1 p-3 rounded-2xl bg-white shadow-sm text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map w-4 h-4" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg></div><div class="flex-1"><div class="flex items-center justify-between gap-3 mb-2"><p class="text-base font-black text-slate-900">Regional Franchise</p><span class="text-2xl">🌍+</span></div><p class="text-xs text-slate-500 font-medium leading-relaxed mb-4">Uganda, Kenya, Rwanda (1% royalty)</p><div class="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-xl w-fit border border-slate-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coins w-3.5 h-3.5 text-revenue" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg><span class="text-[11px] font-black text-revenue uppercase tracking-wider">$1M/yr</span></div></div></div><div class="sm:col-span-2 p-8 bg-pink-50/50 rounded-[40px] border border-pink-100 flex gap-6 items-center relative overflow-hidden group/empower"><div class="p-4 bg-white rounded-2xl text-pink-500 shadow-lg relative z-10 group-hover/empower:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-6 h-6 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></div><div class="relative z-10"><span class="uppercase tracking-[0.3em] text-[10px] font-black block mb-2 text-pink-400">Women's Empowerment Focus</span><p class="text-sm text-pink-900 font-bold leading-relaxed italic">TakaLink becomes the pan-African standard for fair-wage and gender-equitable waste tracking.</p></div><div class="absolute top-0 right-0 w-32 h-32 bg-pink-200/20 blur-3xl rounded-full -mr-16 -mt-16"></div></div></div></div><span class="absolute -bottom-20 -right-20 font-display text-[300px] font-black text-slate-900/5 leading-none pointer-events-none select-none">4</span></div></div></main><section class="py-40 px-6 bg-white border-t border-slate-100"><div class="max-w-7xl mx-auto"><div class="text-center mb-24"><h2 class="font-display text-6xl font-black mb-6 tracking-tight">Key Impact Metrics</h2><p class="text-slate-500 uppercase tracking-[0.4em] text-sm font-bold">Measuring the Revolution</p></div><div class="overflow-x-auto pb-12"><table class="w-full border-collapse min-w-[800px]"><thead><tr class="border-b-4 border-slate-900"><th class="py-10 text-left font-serif text-2xl font-bold text-slate-400">Metric</th><th class="py-10 text-center font-display text-xl font-black uppercase tracking-widest">Phase 1</th><th class="py-10 text-center font-display text-xl font-black uppercase tracking-widest">Phase 2</th><th class="py-10 text-center font-display text-xl font-black uppercase tracking-widest">Phase 3</th><th class="py-10 text-center font-display text-xl font-black uppercase tracking-widest">Phase 4</th></tr></thead><tbody class="divide-y divide-slate-100"><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">Pickers with digital ID</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">150</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">1,500</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">5,000</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">50,000+</td></tr><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">Tons verified per year</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">200</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">2,000</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">10,000</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">500,000</td></tr><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">Transport cost reduction</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">70%</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">50%</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">70%</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">80%</td></tr><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">TakaLink annual revenue</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">$12k</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">$100k</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">$500k</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">$5M+</td></tr><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">CO₂ saved (tons)</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">5</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">500</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">5,000</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">250,000</td></tr><tr class="group hover:bg-slate-50 transition-all"><td class="py-10 pr-12 font-black text-slate-900 text-lg">Asset financing facilitated</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">1 baler</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">50 balers</td><td class="py-10 text-center font-serif text-3xl group-hover:text-impact transition-colors">100+</td><td class="py-10 text-center font-serif text-4xl group-hover:text-revenue transition-colors font-black">500+</td></tr></tbody></table></div><div class="mt-24 p-16 bg-slate-900 rounded-[80px] text-center text-white relative overflow-hidden group shadow-2xl"><p class="text-3xl font-serif italic text-slate-200 relative z-10 leading-relaxed max-w-4xl mx-auto mb-12">"TakaLink enables physical infrastructure – we never own it, we unlock it with verified data."</p><div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6"><button class="px-10 py-5 bg-emerald-600 hover:bg-emerald-500 text-white font-black uppercase tracking-widest rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-xl shadow-emerald-900/20">Partner With Us</button><button class="px-10 py-5 bg-white text-slate-900 font-black uppercase tracking-widest rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-xl">Fund This Vision</button></div><div class="absolute top-0 left-0 w-full h-full bg-emerald-500/10 blur-3xl -z-0 group-hover:bg-emerald-500/20 transition-colors"></div><div class="mt-16 flex justify-center gap-8 relative z-10 opacity-50"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-recycle w-5 h-5" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path><path d="m14 16-3 3 3 3"></path><path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path><path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg><span class="text-[10px] font-black uppercase tracking-widest">TakaLink</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-5 h-5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><span class="text-[10px] font-black uppercase tracking-widest">TakaData</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-5 h-5" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg><span class="text-[10px] font-black uppercase tracking-widest">TakaHub</span></div></div></div></div></section><footer class="py-32 px-6 bg-offwhite border-t border-slate-100"><div class="max-w-7xl mx-auto"><div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16 mb-20"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-xl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-recycle w-8 h-8" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path><path d="m14 16-3 3 3 3"></path><path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path><path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg></div><div><span class="font-display text-3xl font-black tracking-tighter">TakaLink</span><p class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Data-Driven Waste Economy</p></div></div><div class="flex flex-wrap gap-16"><div><h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Strategic Focus</h5><ul class="space-y-3 text-sm font-bold text-slate-600"><li class="hover:text-emerald-600 transition-colors cursor-default">Data Utility Ledger</li><li class="hover:text-emerald-600 transition-colors cursor-default">Asset Credit Scoring</li><li class="hover:text-emerald-600 transition-colors cursor-default">Marketplace Matching</li></ul></div><div><h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Social Impact</h5><ul class="space-y-3 text-sm font-bold text-slate-600"><li class="hover:text-pink-600 transition-colors cursor-default">Women's Empowerment</li><li class="hover:text-emerald-600 transition-colors cursor-default">CO₂ Reduction</li><li class="hover:text-blue-600 transition-colors cursor-default">Fair Wage Tracking</li></ul></div></div><div class="text-left lg:text-right"><p class="text-xs font-black text-slate-400 uppercase tracking-[0.4em] mb-4">Backbone of East Africa</p><p class="text-lg font-bold text-slate-900">Tanzania • Kenya • Uganda • Rwanda</p></div></div><div class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6"><p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">© 2026 TakaLink. All rights reserved.</p><p class="text-[10px] font-medium text-slate-400 italic">Data as of April 2026. Projections based on pilot assumptions. For illustrative purposes only.</p></div></div></footer></div></div>
+    <script type="module" src="/src/main.tsx"></script>
+  
+
+
+</body></html>
